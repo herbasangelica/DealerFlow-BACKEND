@@ -26,7 +26,7 @@ const createUser = (request, response) => {
         })
         // catch error if the new user wasn't added successfully to the database
         .catch((error) => {
-          response.status(500).send({
+          response.status(400).send({
             message: "Error creating user",
             error,
           });
